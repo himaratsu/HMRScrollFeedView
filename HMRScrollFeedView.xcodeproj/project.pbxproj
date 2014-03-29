@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2079DA0518E6BB31004C71F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA0418E6BB31004C71F8 /* Foundation.framework */; };
+		2079DA0A18E6BB31004C71F8 /* HMRScrollFeedView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2079DA0918E6BB31004C71F8 /* HMRScrollFeedView.h */; };
+		2079DA0C18E6BB31004C71F8 /* HMRScrollFeedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA0B18E6BB31004C71F8 /* HMRScrollFeedView.m */; };
+		2079DA1318E6BB31004C71F8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA1218E6BB31004C71F8 /* XCTest.framework */; };
+		2079DA1418E6BB31004C71F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA0418E6BB31004C71F8 /* Foundation.framework */; };
+		2079DA1618E6BB31004C71F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA1518E6BB31004C71F8 /* UIKit.framework */; };
+		2079DA1918E6BB31004C71F8 /* libHMRScrollFeedView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA0118E6BB31004C71F8 /* libHMRScrollFeedView.a */; };
+		2079DA1F18E6BB31004C71F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2079DA1D18E6BB31004C71F8 /* InfoPlist.strings */; };
+		2079DA2118E6BB31004C71F8 /* HMRScrollFeedViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA2018E6BB31004C71F8 /* HMRScrollFeedViewTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2079DA1718E6BB31004C71F8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2079D9F918E6BB31004C71F8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2079DA0018E6BB31004C71F8;
+			remoteInfo = HMRScrollFeedView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2079D9FF18E6BB31004C71F8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				2079DA0A18E6BB31004C71F8 /* HMRScrollFeedView.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2079DA0118E6BB31004C71F8 /* libHMRScrollFeedView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libHMRScrollFeedView.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		2079DA0418E6BB31004C71F8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		2079DA0818E6BB31004C71F8 /* HMRScrollFeedView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HMRScrollFeedView-Prefix.pch"; sourceTree = "<group>"; };
+		2079DA0918E6BB31004C71F8 /* HMRScrollFeedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMRScrollFeedView.h; sourceTree = "<group>"; };
+		2079DA0B18E6BB31004C71F8 /* HMRScrollFeedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMRScrollFeedView.m; sourceTree = "<group>"; };
+		2079DA1118E6BB31004C71F8 /* HMRScrollFeedViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HMRScrollFeedViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2079DA1218E6BB31004C71F8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		2079DA1518E6BB31004C71F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		2079DA1C18E6BB31004C71F8 /* HMRScrollFeedViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HMRScrollFeedViewTests-Info.plist"; sourceTree = "<group>"; };
+		2079DA1E18E6BB31004C71F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2079DA2018E6BB31004C71F8 /* HMRScrollFeedViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMRScrollFeedViewTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2079D9FE18E6BB31004C71F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2079DA0518E6BB31004C71F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2079DA0E18E6BB31004C71F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2079DA1318E6BB31004C71F8 /* XCTest.framework in Frameworks */,
+				2079DA1918E6BB31004C71F8 /* libHMRScrollFeedView.a in Frameworks */,
+				2079DA1618E6BB31004C71F8 /* UIKit.framework in Frameworks */,
+				2079DA1418E6BB31004C71F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2079D9F818E6BB31004C71F8 = {
+			isa = PBXGroup;
+			children = (
+				2079DA0618E6BB31004C71F8 /* HMRScrollFeedView */,
+				2079DA1A18E6BB31004C71F8 /* HMRScrollFeedViewTests */,
+				2079DA0318E6BB31004C71F8 /* Frameworks */,
+				2079DA0218E6BB31004C71F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2079DA0218E6BB31004C71F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2079DA0118E6BB31004C71F8 /* libHMRScrollFeedView.a */,
+				2079DA1118E6BB31004C71F8 /* HMRScrollFeedViewTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2079DA0318E6BB31004C71F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2079DA0418E6BB31004C71F8 /* Foundation.framework */,
+				2079DA1218E6BB31004C71F8 /* XCTest.framework */,
+				2079DA1518E6BB31004C71F8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2079DA0618E6BB31004C71F8 /* HMRScrollFeedView */ = {
+			isa = PBXGroup;
+			children = (
+				2079DA0918E6BB31004C71F8 /* HMRScrollFeedView.h */,
+				2079DA0B18E6BB31004C71F8 /* HMRScrollFeedView.m */,
+				2079DA0718E6BB31004C71F8 /* Supporting Files */,
+			);
+			path = HMRScrollFeedView;
+			sourceTree = "<group>";
+		};
+		2079DA0718E6BB31004C71F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2079DA0818E6BB31004C71F8 /* HMRScrollFeedView-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2079DA1A18E6BB31004C71F8 /* HMRScrollFeedViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				2079DA2018E6BB31004C71F8 /* HMRScrollFeedViewTests.m */,
+				2079DA1B18E6BB31004C71F8 /* Supporting Files */,
+			);
+			path = HMRScrollFeedViewTests;
+			sourceTree = "<group>";
+		};
+		2079DA1B18E6BB31004C71F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2079DA1C18E6BB31004C71F8 /* HMRScrollFeedViewTests-Info.plist */,
+				2079DA1D18E6BB31004C71F8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2079DA0018E6BB31004C71F8 /* HMRScrollFeedView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2079DA2418E6BB31004C71F8 /* Build configuration list for PBXNativeTarget "HMRScrollFeedView" */;
+			buildPhases = (
+				2079D9FD18E6BB31004C71F8 /* Sources */,
+				2079D9FE18E6BB31004C71F8 /* Frameworks */,
+				2079D9FF18E6BB31004C71F8 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HMRScrollFeedView;
+			productName = HMRScrollFeedView;
+			productReference = 2079DA0118E6BB31004C71F8 /* libHMRScrollFeedView.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2079DA1018E6BB31004C71F8 /* HMRScrollFeedViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2079DA2718E6BB31004C71F8 /* Build configuration list for PBXNativeTarget "HMRScrollFeedViewTests" */;
+			buildPhases = (
+				2079DA0D18E6BB31004C71F8 /* Sources */,
+				2079DA0E18E6BB31004C71F8 /* Frameworks */,
+				2079DA0F18E6BB31004C71F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2079DA1818E6BB31004C71F8 /* PBXTargetDependency */,
+			);
+			name = HMRScrollFeedViewTests;
+			productName = HMRScrollFeedViewTests;
+			productReference = 2079DA1118E6BB31004C71F8 /* HMRScrollFeedViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2079D9F918E6BB31004C71F8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = himara2;
+			};
+			buildConfigurationList = 2079D9FC18E6BB31004C71F8 /* Build configuration list for PBXProject "HMRScrollFeedView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 2079D9F818E6BB31004C71F8;
+			productRefGroup = 2079DA0218E6BB31004C71F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2079DA0018E6BB31004C71F8 /* HMRScrollFeedView */,
+				2079DA1018E6BB31004C71F8 /* HMRScrollFeedViewTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2079DA0F18E6BB31004C71F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2079DA1F18E6BB31004C71F8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2079D9FD18E6BB31004C71F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2079DA0C18E6BB31004C71F8 /* HMRScrollFeedView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2079DA0D18E6BB31004C71F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2079DA2118E6BB31004C71F8 /* HMRScrollFeedViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2079DA1818E6BB31004C71F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2079DA0018E6BB31004C71F8 /* HMRScrollFeedView */;
+			targetProxy = 2079DA1718E6BB31004C71F8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2079DA1D18E6BB31004C71F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2079DA1E18E6BB31004C71F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2079DA2218E6BB31004C71F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2079DA2318E6BB31004C71F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2079DA2518E6BB31004C71F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/HMRScrollFeedView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMRScrollFeedView/HMRScrollFeedView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2079DA2618E6BB31004C71F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/HMRScrollFeedView.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMRScrollFeedView/HMRScrollFeedView-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2079DA2818E6BB31004C71F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMRScrollFeedView/HMRScrollFeedView-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HMRScrollFeedViewTests/HMRScrollFeedViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		2079DA2918E6BB31004C71F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMRScrollFeedView/HMRScrollFeedView-Prefix.pch";
+				INFOPLIST_FILE = "HMRScrollFeedViewTests/HMRScrollFeedViewTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2079D9FC18E6BB31004C71F8 /* Build configuration list for PBXProject "HMRScrollFeedView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2079DA2218E6BB31004C71F8 /* Debug */,
+				2079DA2318E6BB31004C71F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2079DA2418E6BB31004C71F8 /* Build configuration list for PBXNativeTarget "HMRScrollFeedView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2079DA2518E6BB31004C71F8 /* Debug */,
+				2079DA2618E6BB31004C71F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2079DA2718E6BB31004C71F8 /* Build configuration list for PBXNativeTarget "HMRScrollFeedViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2079DA2818E6BB31004C71F8 /* Debug */,
+				2079DA2918E6BB31004C71F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2079D9F918E6BB31004C71F8 /* Project object */;
+}
