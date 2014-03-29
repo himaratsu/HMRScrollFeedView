@@ -40,6 +40,8 @@
     NSMutableArray *array = [NSMutableArray array];
     for (int i=0; i<9; i++) {
         UIViewController *vc = [[UIViewController alloc] init];
+        vc.view.frame = self.view.frame;
+        
         switch (i%3) {
             case 0:
                 vc.view.backgroundColor = [UIColor redColor];
@@ -56,10 +58,10 @@
         UILabel *label = [[UILabel alloc] init];
         label.text = [NSString stringWithFormat:@"%d", i];
         label.font = [UIFont systemFontOfSize:100.0f];
+        label.textColor = [UIColor whiteColor];
         [label sizeToFit];
         label.center = vc.view.center;
         [vc.view addSubview:label];
-        
         
         [array addObject:vc];
     }
