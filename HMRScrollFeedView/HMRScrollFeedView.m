@@ -53,7 +53,6 @@
 - (void)initialize
 {
     self.menuScrollView = [[UIScrollView alloc] init];
-    _menuScrollView.backgroundColor = [UIColor grayColor];
     [self addSubview:_menuScrollView];
     
     self.pageViewController = [[UIPageViewController alloc]
@@ -68,7 +67,6 @@
 
 - (void)setHmrDataSource:(id<HMRScrollFeedViewDataSource>)hmrDataSource {
     _hmrDataSource = hmrDataSource;
-    
     [self setNeedsLayout];
 }
 
@@ -79,6 +77,7 @@
                                        self.frame.origin.x,
                                        self.frame.size.width,
                                        menuSize.height);
+    [self layoutMenuScrollView];
     
     _pageViewController.view.frame = CGRectMake(self.frame.origin.x,
                                                 menuSize.height,
@@ -93,6 +92,20 @@
                                      completion:nil];
     }
     
+}
+
+- (void)layoutMenuScrollView {
+    CGSize menuSize = [_hmrDataSource sizeOfMenuView:self];
+    NSArray *menuViews = [_hmrDataSource viewsForMenuView:self];
+    
+    NSInteger index = 0;
+    for (UIView *v in menuViews) {
+        v.frame = CGRectMake(menuSize.width * index, 0, menuSize.width, menuSize.height);
+        [_menuScrollView addSubview:v];
+        
+        index++;
+    }
+    _menuScrollView.contentSize = CGSizeMake(menuSize.width * index, menuSize.height);
 }
 
 - (void)dealloc
