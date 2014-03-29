@@ -34,4 +34,6 @@
 @property (nonatomic, assign) id<HMRScrollFeedViewDataSource> hmrDataSource;
 @property (nonatomic, assign) id<HMRScrollFeedViewDelegate> hmrDelegate;
 
+@property (nonatomic, readonly) NSInteger currentPageIndex;
+
 @end

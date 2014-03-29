@@ -99,10 +99,17 @@
     NSArray *menuViews = [_hmrDataSource viewsForMenuView:self];
     
     NSInteger index = 0;
+    
     for (UIView *v in menuViews) {
         v.frame = CGRectMake(menuSize.width * index, 0, menuSize.width, menuSize.height);
-        [_menuScrollView addSubview:v];
+        v.tag = index;
+        v.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
+                                              initWithTarget:self
+                                              action:@selector(didTapMenuView:)];
+        [v addGestureRecognizer:tapGesture];
         
+        [_menuScrollView addSubview:v];
         index++;
     }
     _menuScrollView.contentSize = CGSizeMake(menuSize.width * index, menuSize.height);
@@ -130,7 +137,7 @@
     page--;
     
     [self moveToPageIndexInMenuScrollViewWithIndex:page];
-    
+    _currentPageIndex = page;
     return _viewControllers[page];
 }
 
@@ -147,7 +154,7 @@
     page++;
     
     [self moveToPageIndexInMenuScrollViewWithIndex:page];
-    
+    _currentPageIndex = page;
     return _viewControllers[page];
 }
 
@@ -167,5 +174,29 @@
     [_menuScrollView scrollRectToVisible:destFrame animated:YES];
 }
 
+- (void)didTapMenuView:(UITapGestureRecognizer *)gesture {
+    UIView *view = [gesture view];
+    NSInteger destIndex = view.tag;
+    
+    if (_currentPageIndex == destIndex) {
+        return;
+    }
+    
+    UIPageViewControllerNavigationDirection direction;
+    if (_currentPageIndex > destIndex) {
+        direction = UIPageViewControllerNavigationDirectionReverse;
+    }
+    else if (_currentPageIndex < destIndex) {
+        direction = UIPageViewControllerNavigationDirectionForward;
+    }
+    
+    [_pageViewController setViewControllers:@[_viewControllers[destIndex]]
+                                  direction:direction
+                                   animated:YES
+                                 completion:nil];
+    _currentPageIndex = destIndex;
+    
+    [self moveToPageIndexInMenuScrollViewWithIndex:destIndex];
+}
 
 @end
