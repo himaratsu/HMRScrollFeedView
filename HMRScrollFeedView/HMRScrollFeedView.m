@@ -129,6 +129,8 @@
     
     page--;
     
+    [self moveToPageIndexInMenuScrollViewWithIndex:page];
+    
     return _viewControllers[page];
 }
 
@@ -144,12 +146,25 @@
     }
     page++;
     
+    [self moveToPageIndexInMenuScrollViewWithIndex:page];
+    
     return _viewControllers[page];
 }
 
 - (NSUInteger)indexOfViewController:(UIViewController *)viewController
 {
     return [_viewControllers indexOfObject:viewController];
+}
+
+#pragma mark - MenuScrollView
+
+- (void)moveToPageIndexInMenuScrollViewWithIndex:(NSInteger)index {
+    CGSize menuSize = [_hmrDataSource sizeOfMenuView:self];
+    CGRect destFrame = CGRectMake(index * menuSize.width + menuSize.width/2 - 160,
+                                  0,
+                                  _menuScrollView.frame.size.width,
+                                  _menuScrollView.frame.size.height);
+    [_menuScrollView scrollRectToVisible:destFrame animated:YES];
 }
 
 
