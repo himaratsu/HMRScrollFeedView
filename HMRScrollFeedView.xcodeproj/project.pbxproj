@@ -16,6 +16,16 @@
 		2079DA1918E6BB31004C71F8 /* libHMRScrollFeedView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA0118E6BB31004C71F8 /* libHMRScrollFeedView.a */; };
 		2079DA1F18E6BB31004C71F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2079DA1D18E6BB31004C71F8 /* InfoPlist.strings */; };
 		2079DA2118E6BB31004C71F8 /* HMRScrollFeedViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA2018E6BB31004C71F8 /* HMRScrollFeedViewTests.m */; };
+		2079DA2F18E6BB58004C71F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA0418E6BB31004C71F8 /* Foundation.framework */; };
+		2079DA3118E6BB58004C71F8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA3018E6BB58004C71F8 /* CoreGraphics.framework */; };
+		2079DA3218E6BB58004C71F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA1518E6BB31004C71F8 /* UIKit.framework */; };
+		2079DA3818E6BB59004C71F8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2079DA3618E6BB58004C71F8 /* InfoPlist.strings */; };
+		2079DA3A18E6BB59004C71F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA3918E6BB59004C71F8 /* main.m */; };
+		2079DA3E18E6BB59004C71F8 /* HMRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA3D18E6BB59004C71F8 /* HMRAppDelegate.m */; };
+		2079DA4118E6BB59004C71F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2079DA3F18E6BB59004C71F8 /* Main.storyboard */; };
+		2079DA4418E6BB59004C71F8 /* HMRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA4318E6BB59004C71F8 /* HMRViewController.m */; };
+		2079DA4618E6BB59004C71F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2079DA4518E6BB59004C71F8 /* Images.xcassets */; };
+		2079DA5F18E6BD30004C71F8 /* libHMRScrollFeedView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA0118E6BB31004C71F8 /* libHMRScrollFeedView.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,18 @@
 		2079DA1C18E6BB31004C71F8 /* HMRScrollFeedViewTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HMRScrollFeedViewTests-Info.plist"; sourceTree = "<group>"; };
 		2079DA1E18E6BB31004C71F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2079DA2018E6BB31004C71F8 /* HMRScrollFeedViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMRScrollFeedViewTests.m; sourceTree = "<group>"; };
+		2079DA2E18E6BB58004C71F8 /* HMRSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HMRSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2079DA3018E6BB58004C71F8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		2079DA3518E6BB58004C71F8 /* HMRSampleApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HMRSampleApp-Info.plist"; sourceTree = "<group>"; };
+		2079DA3718E6BB58004C71F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2079DA3918E6BB59004C71F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2079DA3B18E6BB59004C71F8 /* HMRSampleApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HMRSampleApp-Prefix.pch"; sourceTree = "<group>"; };
+		2079DA3C18E6BB59004C71F8 /* HMRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMRAppDelegate.h; sourceTree = "<group>"; };
+		2079DA3D18E6BB59004C71F8 /* HMRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMRAppDelegate.m; sourceTree = "<group>"; };
+		2079DA4018E6BB59004C71F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2079DA4218E6BB59004C71F8 /* HMRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMRViewController.h; sourceTree = "<group>"; };
+		2079DA4318E6BB59004C71F8 /* HMRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMRViewController.m; sourceTree = "<group>"; };
+		2079DA4518E6BB59004C71F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +97,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2079DA2B18E6BB58004C71F8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2079DA5F18E6BD30004C71F8 /* libHMRScrollFeedView.a in Frameworks */,
+				2079DA3118E6BB58004C71F8 /* CoreGraphics.framework in Frameworks */,
+				2079DA3218E6BB58004C71F8 /* UIKit.framework in Frameworks */,
+				2079DA2F18E6BB58004C71F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -83,6 +116,7 @@
 			children = (
 				2079DA0618E6BB31004C71F8 /* HMRScrollFeedView */,
 				2079DA1A18E6BB31004C71F8 /* HMRScrollFeedViewTests */,
+				2079DA3318E6BB58004C71F8 /* HMRSampleApp */,
 				2079DA0318E6BB31004C71F8 /* Frameworks */,
 				2079DA0218E6BB31004C71F8 /* Products */,
 			);
@@ -93,6 +127,7 @@
 			children = (
 				2079DA0118E6BB31004C71F8 /* libHMRScrollFeedView.a */,
 				2079DA1118E6BB31004C71F8 /* HMRScrollFeedViewTests.xctest */,
+				2079DA2E18E6BB58004C71F8 /* HMRSampleApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +138,7 @@
 				2079DA0418E6BB31004C71F8 /* Foundation.framework */,
 				2079DA1218E6BB31004C71F8 /* XCTest.framework */,
 				2079DA1518E6BB31004C71F8 /* UIKit.framework */,
+				2079DA3018E6BB58004C71F8 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -139,6 +175,31 @@
 			children = (
 				2079DA1C18E6BB31004C71F8 /* HMRScrollFeedViewTests-Info.plist */,
 				2079DA1D18E6BB31004C71F8 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2079DA3318E6BB58004C71F8 /* HMRSampleApp */ = {
+			isa = PBXGroup;
+			children = (
+				2079DA3C18E6BB59004C71F8 /* HMRAppDelegate.h */,
+				2079DA3D18E6BB59004C71F8 /* HMRAppDelegate.m */,
+				2079DA3F18E6BB59004C71F8 /* Main.storyboard */,
+				2079DA4218E6BB59004C71F8 /* HMRViewController.h */,
+				2079DA4318E6BB59004C71F8 /* HMRViewController.m */,
+				2079DA4518E6BB59004C71F8 /* Images.xcassets */,
+				2079DA3418E6BB58004C71F8 /* Supporting Files */,
+			);
+			path = HMRSampleApp;
+			sourceTree = "<group>";
+		};
+		2079DA3418E6BB58004C71F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2079DA3518E6BB58004C71F8 /* HMRSampleApp-Info.plist */,
+				2079DA3618E6BB58004C71F8 /* InfoPlist.strings */,
+				2079DA3918E6BB59004C71F8 /* main.m */,
+				2079DA3B18E6BB59004C71F8 /* HMRSampleApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -181,6 +242,23 @@
 			productReference = 2079DA1118E6BB31004C71F8 /* HMRScrollFeedViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		2079DA2D18E6BB58004C71F8 /* HMRSampleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2079DA5918E6BB59004C71F8 /* Build configuration list for PBXNativeTarget "HMRSampleApp" */;
+			buildPhases = (
+				2079DA2A18E6BB58004C71F8 /* Sources */,
+				2079DA2B18E6BB58004C71F8 /* Frameworks */,
+				2079DA2C18E6BB58004C71F8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HMRSampleApp;
+			productName = HMRSampleApp;
+			productReference = 2079DA2E18E6BB58004C71F8 /* HMRSampleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,6 +267,11 @@
 			attributes = {
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = himara2;
+				TargetAttributes = {
+					2079DA1018E6BB31004C71F8 = {
+						TestTargetID = 2079DA2D18E6BB58004C71F8;
+					};
+				};
 			};
 			buildConfigurationList = 2079D9FC18E6BB31004C71F8 /* Build configuration list for PBXProject "HMRScrollFeedView" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -196,6 +279,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 2079D9F818E6BB31004C71F8;
 			productRefGroup = 2079DA0218E6BB31004C71F8 /* Products */;
@@ -204,6 +288,7 @@
 			targets = (
 				2079DA0018E6BB31004C71F8 /* HMRScrollFeedView */,
 				2079DA1018E6BB31004C71F8 /* HMRScrollFeedViewTests */,
+				2079DA2D18E6BB58004C71F8 /* HMRSampleApp */,
 			);
 		};
 /* End PBXProject section */
@@ -214,6 +299,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2079DA1F18E6BB31004C71F8 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2079DA2C18E6BB58004C71F8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2079DA4618E6BB59004C71F8 /* Images.xcassets in Resources */,
+				2079DA3818E6BB59004C71F8 /* InfoPlist.strings in Resources */,
+				2079DA4118E6BB59004C71F8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +331,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2079DA2A18E6BB58004C71F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2079DA3E18E6BB59004C71F8 /* HMRAppDelegate.m in Sources */,
+				2079DA3A18E6BB59004C71F8 /* main.m in Sources */,
+				2079DA4418E6BB59004C71F8 /* HMRViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -253,6 +358,22 @@
 				2079DA1E18E6BB31004C71F8 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2079DA3618E6BB58004C71F8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2079DA3718E6BB58004C71F8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		2079DA3F18E6BB59004C71F8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2079DA4018E6BB59004C71F8 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -353,6 +474,7 @@
 		2079DA2818E6BB31004C71F8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HMRSampleApp.app/HMRSampleApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -366,6 +488,7 @@
 				);
 				INFOPLIST_FILE = "HMRScrollFeedViewTests/HMRScrollFeedViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -373,6 +496,7 @@
 		2079DA2918E6BB31004C71F8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/HMRSampleApp.app/HMRSampleApp";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -382,7 +506,48 @@
 				GCC_PREFIX_HEADER = "HMRScrollFeedView/HMRScrollFeedView-Prefix.pch";
 				INFOPLIST_FILE = "HMRScrollFeedViewTests/HMRScrollFeedViewTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		2079DA5A18E6BB59004C71F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMRSampleApp/HMRSampleApp-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HMRSampleApp/HMRSampleApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		2079DA5B18E6BB59004C71F8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "HMRSampleApp/HMRSampleApp-Prefix.pch";
+				INFOPLIST_FILE = "HMRSampleApp/HMRSampleApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
@@ -411,6 +576,14 @@
 			buildConfigurations = (
 				2079DA2818E6BB31004C71F8 /* Debug */,
 				2079DA2918E6BB31004C71F8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2079DA5918E6BB59004C71F8 /* Build configuration list for PBXNativeTarget "HMRSampleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2079DA5A18E6BB59004C71F8 /* Debug */,
+				2079DA5B18E6BB59004C71F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

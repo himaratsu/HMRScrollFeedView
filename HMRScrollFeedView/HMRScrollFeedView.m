@@ -10,4 +10,8 @@
 
 @implementation HMRScrollFeedView
 
++ (NSString *)helloWorld {
+    return @"Hello!";
+}
+
 @end

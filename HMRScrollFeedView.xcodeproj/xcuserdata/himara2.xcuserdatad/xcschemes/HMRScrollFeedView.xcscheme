@@ -38,6 +38,16 @@
                ReferencedContainer = "container:HMRScrollFeedView.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "2079DA4A18E6BB59004C71F8"
+               BuildableName = "HMRSampleAppTests.xctest"
+               BlueprintName = "HMRSampleAppTests"
+               ReferencedContainer = "container:HMRScrollFeedView.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

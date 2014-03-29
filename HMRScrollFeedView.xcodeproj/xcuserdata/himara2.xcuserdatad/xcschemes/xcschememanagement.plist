@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>HMRSampleApp.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>HMRScrollFeedView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,16 @@
 			<true/>
 		</dict>
 		<key>2079DA1018E6BB31004C71F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2079DA2D18E6BB58004C71F8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2079DA4A18E6BB59004C71F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
