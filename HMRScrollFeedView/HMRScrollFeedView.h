@@ -16,8 +16,8 @@
 - (NSInteger)numberOfPages:(HMRScrollFeedView *)scrollFeedView;
 - (CGSize)sizeOfMenuView:(HMRScrollFeedView *)scrollFeedView;
 - (CGSize)sizeOfFeedView:(HMRScrollFeedView *)scrollFeedView;
-- (UIView *)viewForMenuView:(HMRScrollFeedView *)scrollFeedView;
-- (UIView *)viewForFeedView:(HMRScrollFeedView *)scrollFeedView;
+- (NSArray *)viewsForMenuView:(HMRScrollFeedView *)scrollFeedView;
+- (NSArray *)viewsForFeedView:(HMRScrollFeedView *)scrollFeedView;
 
 @end
 
@@ -29,8 +29,9 @@
 
 
 
-@interface HMRScrollFeedView : NSObject
+@interface HMRScrollFeedView : UIView
 
-+ (NSString *)helloWorld;
+@property (nonatomic, assign) id<HMRScrollFeedViewDataSource> hmrDataSource;
+@property (nonatomic, assign) id<HMRScrollFeedViewDelegate> hmrDelegate;
 
 @end
