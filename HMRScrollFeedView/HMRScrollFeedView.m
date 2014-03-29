@@ -75,10 +75,15 @@
 - (void)layoutSubviews {
     NSLog(@"layoutSubviews");
     CGSize menuSize = [_hmrDataSource sizeOfMenuView:self];
-    _menuScrollView.frame = CGRectMake(0, 0, 320, menuSize.height);
+    _menuScrollView.frame = CGRectMake(self.frame.origin.x,
+                                       self.frame.origin.x,
+                                       self.frame.size.width,
+                                       menuSize.height);
     
-    _pageViewController.view.frame = CGRectMake(0, menuSize.height,
-                                                320, self.frame.size.height - menuSize.height);
+    _pageViewController.view.frame = CGRectMake(self.frame.origin.x,
+                                                menuSize.height,
+                                                self.frame.size.width,
+                                                self.frame.size.height - menuSize.height);
     
     self.viewControllers = [_hmrDataSource viewsForFeedView:self];
     if ([_viewControllers count] > 0) {
@@ -111,7 +116,6 @@
     
     page--;
     
-    // 前述したようにページのインスタンス生成を行う
     return _viewControllers[page];
 }
 

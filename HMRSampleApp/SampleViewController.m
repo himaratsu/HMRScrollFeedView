@@ -10,15 +10,8 @@
 
 @interface SampleViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
 @end
 
 @implementation SampleViewController
-
-- (void)setPageTitle:(NSString *)pageTitle {
-    _pageTitle = pageTitle;
-    _titleLabel.text = pageTitle;
-}
 
 @end

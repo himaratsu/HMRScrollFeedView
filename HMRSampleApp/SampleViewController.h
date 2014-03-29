@@ -10,6 +10,6 @@
 
 @interface SampleViewController : UIViewController
 
-@property (nonatomic) NSString *pageTitle;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end

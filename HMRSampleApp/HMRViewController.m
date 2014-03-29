@@ -10,7 +10,7 @@
 #import "HMRScrollFeedView.h"
 #import "SampleViewController.h"
 
-static const NSInteger MenuHeight = 200;
+static const NSInteger MenuHeight = 45;
 
 @interface HMRViewController ()
 <HMRScrollFeedViewDelegate, HMRScrollFeedViewDataSource>
@@ -79,10 +79,10 @@ static const NSInteger MenuHeight = 200;
 - (NSArray *)viewsForFeedView:(HMRScrollFeedView *)scrollFeedView {
     NSMutableArray *array = [NSMutableArray array];
     for (int i=0; i<9; i++) {
-        // create view controller
+        // create rview controller
         SampleViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SampleViewController"];
         [vc view];
-        vc.pageTitle = [NSString stringWithFormat:@"%d", i];
+        vc.titleLabel.text = [NSString stringWithFormat:@"%d", i];
         
         switch (i%3) {
             case 0:
