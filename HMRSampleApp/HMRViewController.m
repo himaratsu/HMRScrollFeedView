@@ -8,6 +8,9 @@
 
 #import "HMRViewController.h"
 #import "HMRScrollFeedView.h"
+#import "SampleViewController.h"
+
+static const NSInteger MenuHeight = 200;
 
 @interface HMRViewController ()
 <HMRScrollFeedViewDelegate, HMRScrollFeedViewDataSource>
@@ -18,15 +21,22 @@
 
 @implementation HMRViewController
 
+- (void)loadView {
+    self.view = self.feedView;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+}
 
-    self.feedView = [[HMRScrollFeedView alloc] init];
-    _feedView.hmrDataSource = self;
-    _feedView.hmrDelegate = self;
-    
-    [self.view addSubview:_feedView];
+- (HMRScrollFeedView *)feedView {
+    if (_feedView == nil) {
+        self.feedView = [[HMRScrollFeedView alloc] init];
+        _feedView.hmrDataSource = self;
+        _feedView.hmrDelegate = self;
+    }
+    return _feedView;
 }
 
 
@@ -36,11 +46,43 @@
     return 9;
 }
 
+- (CGSize)sizeOfMenuView:(HMRScrollFeedView *)scrollFeedView {
+    return CGSizeMake(80, MenuHeight);
+}
+
+- (NSArray *)viewsForMenuView:(HMRScrollFeedView *)scrollFeedView {
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i=0; i<9; i++) {
+        // create view controller
+        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, MenuHeight)];
+        
+        switch (i%3) {
+            case 0:
+                v.backgroundColor = [UIColor yellowColor];
+                break;
+            case 1:
+                v.backgroundColor = [UIColor purpleColor];
+                break;
+            case 2:
+                v.backgroundColor = [UIColor orangeColor];
+                break;
+            default:
+                break;
+        }
+        [array addObject:v];
+    }
+    
+    return [array copy];
+
+}
+
 - (NSArray *)viewsForFeedView:(HMRScrollFeedView *)scrollFeedView {
     NSMutableArray *array = [NSMutableArray array];
     for (int i=0; i<9; i++) {
-        UIViewController *vc = [[UIViewController alloc] init];
-        vc.view.frame = self.view.frame;
+        // create view controller
+        SampleViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SampleViewController"];
+        [vc view];
+        vc.pageTitle = [NSString stringWithFormat:@"%d", i];
         
         switch (i%3) {
             case 0:
@@ -55,13 +97,6 @@
             default:
                 break;
         }
-        UILabel *label = [[UILabel alloc] init];
-        label.text = [NSString stringWithFormat:@"%d", i];
-        label.font = [UIFont systemFontOfSize:100.0f];
-        label.textColor = [UIColor whiteColor];
-        [label sizeToFit];
-        label.center = vc.view.center;
-        [vc.view addSubview:label];
         
         [array addObject:vc];
     }

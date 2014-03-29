@@ -11,9 +11,12 @@
 @interface HMRScrollFeedView ()
 <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
+// for menu
+@property (nonatomic) UIScrollView *menuScrollView;
+
+// for feed
 @property (nonatomic) NSArray *viewControllers;
 @property (nonatomic) UIPageViewController *pageViewController;
-@property (nonatomic, assign) NSInteger currentPageIndex;
 
 @end
 
@@ -49,6 +52,10 @@
 
 - (void)initialize
 {
+    self.menuScrollView = [[UIScrollView alloc] init];
+    _menuScrollView.backgroundColor = [UIColor grayColor];
+    [self addSubview:_menuScrollView];
+    
     self.pageViewController = [[UIPageViewController alloc]
                                initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
                                navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
@@ -56,21 +63,32 @@
     _pageViewController.delegate = self;
     _pageViewController.dataSource = self;
 
-    [self addSubview:_pageViewController.view];
+    [self insertSubview:_pageViewController.view belowSubview:_menuScrollView];
 }
 
 - (void)setHmrDataSource:(id<HMRScrollFeedViewDataSource>)hmrDataSource {
     _hmrDataSource = hmrDataSource;
     
-    self.viewControllers = [_hmrDataSource viewsForFeedView:self];
-    if ([_viewControllers count] > 0) {
-        [_pageViewController setViewControllers:@[_viewControllers[_currentPageIndex]]
-                                      direction:UIPageViewControllerNavigationDirectionForward
-                                       animated:YES
-                                     completion:nil];   
-    }
+    [self setNeedsLayout];
 }
 
+- (void)layoutSubviews {
+    NSLog(@"layoutSubviews");
+    CGSize menuSize = [_hmrDataSource sizeOfMenuView:self];
+    _menuScrollView.frame = CGRectMake(0, 0, 320, menuSize.height);
+    
+    _pageViewController.view.frame = CGRectMake(0, menuSize.height,
+                                                320, self.frame.size.height - menuSize.height);
+    
+    self.viewControllers = [_hmrDataSource viewsForFeedView:self];
+    if ([_viewControllers count] > 0) {
+        [_pageViewController setViewControllers:@[_viewControllers[0]]
+                                      direction:UIPageViewControllerNavigationDirectionForward
+                                       animated:NO
+                                     completion:nil];
+    }
+    
+}
 
 - (void)dealloc
 {
@@ -111,7 +129,6 @@
     
     return _viewControllers[page];
 }
-
 
 - (NSUInteger)indexOfViewController:(UIViewController *)viewController
 {
