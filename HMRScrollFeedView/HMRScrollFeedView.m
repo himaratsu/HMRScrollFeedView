@@ -11,6 +11,9 @@
 @interface HMRScrollFeedView ()
 <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
+@property (nonatomic) UIPageViewControllerTransitionStyle transitionStyle;
+@property (nonatomic) UIPageViewControllerNavigationOrientation navigationOrientation;
+
 // for menu
 @property (nonatomic) UIScrollView *menuScrollView;
 
@@ -50,14 +53,43 @@
     return self;
 }
 
+- (id)initWithStyle:(UIPageViewControllerTransitionStyle)transitionStyle
+        orientation:(UIPageViewControllerNavigationOrientation)navigationOrientation
+{
+    self = [self init];
+    _transitionStyle = transitionStyle;
+    _navigationOrientation = navigationOrientation;
+    
+    if (self) {
+        [self initialize];
+    }
+    return self;
+}
+
+
+- (id)initWithFrame:(CGRect)frame
+              style:(UIPageViewControllerTransitionStyle)transitionStyle
+        orientation:(UIPageViewControllerNavigationOrientation)navigationOrientation
+{
+    self = [self initWithFrame:frame];
+    _transitionStyle = transitionStyle;
+    _navigationOrientation = navigationOrientation;
+    
+    if (self) {
+        [self initialize];
+    }
+    return self;
+}
+
+
 - (void)initialize
 {
     self.menuScrollView = [[UIScrollView alloc] init];
     [self addSubview:_menuScrollView];
     
     self.pageViewController = [[UIPageViewController alloc]
-                               initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl
-                               navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
+                               initWithTransitionStyle:_transitionStyle
+                               navigationOrientation:_navigationOrientation
                                options:nil];
     _pageViewController.delegate = self;
     _pageViewController.dataSource = self;
@@ -118,6 +150,14 @@
 - (void)dealloc
 {
     
+}
+
+- (UIPageViewControllerTransitionStyle)transitionStyle {
+    return _pageViewController.transitionStyle;
+}
+
+- (UIPageViewControllerNavigationOrientation)navigationOrientation {
+    return _pageViewController.navigationOrientation;
 }
 
 

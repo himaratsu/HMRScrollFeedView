@@ -32,7 +32,8 @@ static const NSInteger MenuHeight = 45;
 
 - (HMRScrollFeedView *)feedView {
     if (_feedView == nil) {
-        self.feedView = [[HMRScrollFeedView alloc] init];
+        self.feedView = [[HMRScrollFeedView alloc] initWithStyle:UIPageViewControllerTransitionStyleScroll
+                                                     orientation:UIPageViewControllerNavigationOrientationHorizontal];
         _feedView.hmrDataSource = self;
         _feedView.hmrDelegate = self;
     }

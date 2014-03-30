@@ -36,4 +36,13 @@
 
 @property (nonatomic, readonly) NSInteger currentPageIndex;
 
+@property (nonatomic, readonly) UIPageViewControllerTransitionStyle transitionStyle;
+@property (nonatomic, readonly) UIPageViewControllerNavigationOrientation navigationOrientation;
+
+- (id)initWithStyle:(UIPageViewControllerTransitionStyle)transitionStyle
+        orientation:(UIPageViewControllerNavigationOrientation)navigationOrientation;
+- (id)initWithFrame:(CGRect)frame
+              style:(UIPageViewControllerTransitionStyle)transitionStyle
+        orientation:(UIPageViewControllerNavigationOrientation)navigationOrientation;
+
 @end
