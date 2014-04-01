@@ -153,8 +153,6 @@
     
     page--;
     
-    [self moveToPageIndexInMenuScrollViewWithIndex:page];
-    _currentPageIndex = page;
     return _viewControllers[page];
 }
 
@@ -170,9 +168,16 @@
     }
     page++;
     
-    [self moveToPageIndexInMenuScrollViewWithIndex:page];
-    _currentPageIndex = page;
     return _viewControllers[page];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray *)pendingViewControllers {
+    if ([pendingViewControllers count] > 0) {
+        NSInteger page = [self indexOfViewController:pendingViewControllers[0]];
+        _currentPageIndex = page;
+        
+        [self moveToPageIndexInMenuScrollViewWithIndex:_currentPageIndex];
+    }
 }
 
 - (NSUInteger)indexOfViewController:(UIViewController *)viewController
@@ -207,13 +212,27 @@
         direction = UIPageViewControllerNavigationDirectionForward;
     }
     
+    __unsafe_unretained id _self = self;
+    
     [_pageViewController setViewControllers:@[_viewControllers[destIndex]]
                                   direction:direction
                                    animated:YES
-                                 completion:nil];
+                                 completion:^(BOOL finished) {
+                                     [_self didChangeCurrentPage];
+                                 }];
     _currentPageIndex = destIndex;
     
     [self moveToPageIndexInMenuScrollViewWithIndex:destIndex];
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray *)previousViewControllers transitionCompleted:(BOOL)completed {
+    [self didChangeCurrentPage];
+}
+
+- (void)didChangeCurrentPage {
+    if ([_hmrDelegate respondsToSelector:@selector(scrollFeedView:didChangeCurrentPage:)]) {
+        [_hmrDelegate scrollFeedView:self didChangeCurrentPage:_currentPageIndex];
+    }
 }
 
 @end

@@ -14,8 +14,7 @@
 
 @protocol HMRScrollFeedViewDelegate <NSObject>
 
-// TODO: to create
-// - didChangePage;
+- (void)scrollFeedView:(HMRScrollFeedView *)scrollFeedView didChangeCurrentPage:(NSInteger)page;
 
 @end
 

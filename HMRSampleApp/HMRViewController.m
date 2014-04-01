@@ -68,6 +68,14 @@ static const NSInteger MenuHeight = 45;
 }
 
 
+#pragma mark - HMRScrollFeedViewDelegate
+
+- (void)scrollFeedView:(HMRScrollFeedView *)scrollFeedView didChangeCurrentPage:(NSInteger)page {
+    NSLog(@"ページ遷移Done. page: %ld", page);
+}
+
+
+
 #pragma mark - Status bar hidden
 
 - (BOOL)prefersStatusBarHidden {
