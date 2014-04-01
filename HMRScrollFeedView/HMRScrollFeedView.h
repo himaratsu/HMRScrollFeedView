@@ -15,7 +15,6 @@
 @required
 - (NSInteger)numberOfPages:(HMRScrollFeedView *)scrollFeedView;
 - (CGSize)sizeOfMenuView:(HMRScrollFeedView *)scrollFeedView;
-- (CGSize)sizeOfFeedView:(HMRScrollFeedView *)scrollFeedView;
 - (NSArray *)viewsForMenuView:(HMRScrollFeedView *)scrollFeedView;
 - (NSArray *)viewsForFeedView:(HMRScrollFeedView *)scrollFeedView;
 
@@ -35,14 +34,12 @@
 @property (nonatomic, assign) id<HMRScrollFeedViewDelegate> hmrDelegate;
 
 @property (nonatomic, readonly) NSInteger currentPageIndex;
-
 @property (nonatomic, readonly) UIPageViewControllerTransitionStyle transitionStyle;
-@property (nonatomic, readonly) UIPageViewControllerNavigationOrientation navigationOrientation;
 
-- (id)initWithStyle:(UIPageViewControllerTransitionStyle)transitionStyle
-        orientation:(UIPageViewControllerNavigationOrientation)navigationOrientation;
+- (id)initWithStyle:(UIPageViewControllerTransitionStyle)transitionStyle;
 - (id)initWithFrame:(CGRect)frame
-              style:(UIPageViewControllerTransitionStyle)transitionStyle
-        orientation:(UIPageViewControllerNavigationOrientation)navigationOrientation;
+              style:(UIPageViewControllerTransitionStyle)transitionStyle;
+
+- (void)reloadData;
 
 @end

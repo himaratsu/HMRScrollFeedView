@@ -9,6 +9,7 @@
 #import "HMRViewController.h"
 #import "HMRScrollFeedView.h"
 #import "SampleViewController.h"
+#import "HMRColorPalette.h"
 
 static const NSInteger MenuHeight = 45;
 
@@ -32,8 +33,7 @@ static const NSInteger MenuHeight = 45;
 
 - (HMRScrollFeedView *)feedView {
     if (_feedView == nil) {
-        self.feedView = [[HMRScrollFeedView alloc] initWithStyle:UIPageViewControllerTransitionStyleScroll
-                                                     orientation:UIPageViewControllerNavigationOrientationHorizontal];
+        self.feedView = [[HMRScrollFeedView alloc] initWithStyle:UIPageViewControllerTransitionStyleScroll];
         _feedView.hmrDataSource = self;
         _feedView.hmrDelegate = self;
     }
@@ -56,20 +56,7 @@ static const NSInteger MenuHeight = 45;
     for (int i=0; i<9; i++) {
         // create view controller
         UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, MenuHeight)];
-        
-        switch (i%3) {
-            case 0:
-                v.backgroundColor = [UIColor yellowColor];
-                break;
-            case 1:
-                v.backgroundColor = [UIColor purpleColor];
-                break;
-            case 2:
-                v.backgroundColor = [UIColor orangeColor];
-                break;
-            default:
-                break;
-        }
+        v.backgroundColor = [HMRColorPalette colorWithIndex:i];
         [array addObject:v];
     }
     
@@ -84,25 +71,19 @@ static const NSInteger MenuHeight = 45;
         SampleViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SampleViewController"];
         [vc view];
         vc.titleLabel.text = [NSString stringWithFormat:@"%d", i];
-        
-        switch (i%3) {
-            case 0:
-                vc.view.backgroundColor = [UIColor redColor];
-                break;
-            case 1:
-                vc.view.backgroundColor = [UIColor greenColor];
-                break;
-            case 2:
-                vc.view.backgroundColor = [UIColor blueColor];
-                break;
-            default:
-                break;
-        }
-        
+        vc.view.backgroundColor = [HMRColorPalette colorWithIndex:i];
+                
         [array addObject:vc];
     }
     
     return [array copy];
+}
+
+
+#pragma mark - Status bar hidden
+
+- (BOOL)prefersStatusBarHidden {
+    return YES;
 }
 
 @end

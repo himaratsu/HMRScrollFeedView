@@ -12,10 +12,10 @@
 <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 
 @property (nonatomic) UIPageViewControllerTransitionStyle transitionStyle;
-@property (nonatomic) UIPageViewControllerNavigationOrientation navigationOrientation;
 
 // for menu
 @property (nonatomic) UIScrollView *menuScrollView;
+@property (nonatomic) CGSize menuSize;
 
 // for feed
 @property (nonatomic) NSArray *viewControllers;
@@ -54,11 +54,9 @@
 }
 
 - (id)initWithStyle:(UIPageViewControllerTransitionStyle)transitionStyle
-        orientation:(UIPageViewControllerNavigationOrientation)navigationOrientation
 {
     self = [self init];
     _transitionStyle = transitionStyle;
-    _navigationOrientation = navigationOrientation;
     
     if (self) {
         [self initialize];
@@ -69,11 +67,9 @@
 
 - (id)initWithFrame:(CGRect)frame
               style:(UIPageViewControllerTransitionStyle)transitionStyle
-        orientation:(UIPageViewControllerNavigationOrientation)navigationOrientation
 {
     self = [self initWithFrame:frame];
     _transitionStyle = transitionStyle;
-    _navigationOrientation = navigationOrientation;
     
     if (self) {
         [self initialize];
@@ -89,7 +85,7 @@
     
     self.pageViewController = [[UIPageViewController alloc]
                                initWithTransitionStyle:_transitionStyle
-                               navigationOrientation:_navigationOrientation
+                               navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
                                options:nil];
     _pageViewController.delegate = self;
     _pageViewController.dataSource = self;
@@ -99,22 +95,21 @@
 
 - (void)setHmrDataSource:(id<HMRScrollFeedViewDataSource>)hmrDataSource {
     _hmrDataSource = hmrDataSource;
-    [self setNeedsLayout];
+    [self reloadData];
 }
 
-- (void)layoutSubviews {
-    NSLog(@"layoutSubviews");
-    CGSize menuSize = [_hmrDataSource sizeOfMenuView:self];
+- (void)reloadData {
+    _menuSize = [_hmrDataSource sizeOfMenuView:self];
     _menuScrollView.frame = CGRectMake(self.frame.origin.x,
                                        self.frame.origin.x,
                                        self.frame.size.width,
-                                       menuSize.height);
+                                       _menuSize.height);
     [self layoutMenuScrollView];
     
     _pageViewController.view.frame = CGRectMake(self.frame.origin.x,
-                                                menuSize.height,
+                                                _menuSize.height,
                                                 self.frame.size.width,
-                                                self.frame.size.height - menuSize.height);
+                                                self.frame.size.height - _menuSize.height);
     
     self.viewControllers = [_hmrDataSource viewsForFeedView:self];
     if ([_viewControllers count] > 0) {
@@ -123,17 +118,15 @@
                                        animated:NO
                                      completion:nil];
     }
-    
 }
 
 - (void)layoutMenuScrollView {
-    CGSize menuSize = [_hmrDataSource sizeOfMenuView:self];
     NSArray *menuViews = [_hmrDataSource viewsForMenuView:self];
     
     NSInteger index = 0;
     
     for (UIView *v in menuViews) {
-        v.frame = CGRectMake(menuSize.width * index, 0, menuSize.width, menuSize.height);
+        v.frame = CGRectMake(_menuSize.width * index, 0, _menuSize.width, _menuSize.height);
         v.tag = index;
         v.userInteractionEnabled = YES;
         UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc]
@@ -144,7 +137,7 @@
         [_menuScrollView addSubview:v];
         index++;
     }
-    _menuScrollView.contentSize = CGSizeMake(menuSize.width * index, menuSize.height);
+    _menuScrollView.contentSize = CGSizeMake(_menuSize.width * index, _menuSize.height);
 }
 
 - (void)dealloc
@@ -206,8 +199,7 @@
 #pragma mark - MenuScrollView
 
 - (void)moveToPageIndexInMenuScrollViewWithIndex:(NSInteger)index {
-    CGSize menuSize = [_hmrDataSource sizeOfMenuView:self];
-    CGRect destFrame = CGRectMake(index * menuSize.width + menuSize.width/2 - 160,
+    CGRect destFrame = CGRectMake(index * _menuSize.width + _menuSize.width/2 - 160,
                                   0,
                                   _menuScrollView.frame.size.width,
                                   _menuScrollView.frame.size.height);
