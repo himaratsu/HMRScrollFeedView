@@ -26,8 +26,8 @@
 		2079DA4418E6BB59004C71F8 /* HMRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA4318E6BB59004C71F8 /* HMRViewController.m */; };
 		2079DA4618E6BB59004C71F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2079DA4518E6BB59004C71F8 /* Images.xcassets */; };
 		2079DA5F18E6BD30004C71F8 /* libHMRScrollFeedView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2079DA0118E6BB31004C71F8 /* libHMRScrollFeedView.a */; };
-		2079DA6518E6D5C0004C71F8 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA6418E6D5C0004C71F8 /* SampleViewController.m */; };
 		2079DA6818EA4117004C71F8 /* HMRColorPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA6718EA4117004C71F8 /* HMRColorPalette.m */; };
+		2079DA6B18EA53A2004C71F8 /* HMRSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2079DA6A18EA53A2004C71F8 /* HMRSampleViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +77,10 @@
 		2079DA4218E6BB59004C71F8 /* HMRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HMRViewController.h; sourceTree = "<group>"; };
 		2079DA4318E6BB59004C71F8 /* HMRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HMRViewController.m; sourceTree = "<group>"; };
 		2079DA4518E6BB59004C71F8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2079DA6318E6D5C0004C71F8 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SampleViewController.h; sourceTree = "<group>"; };
-		2079DA6418E6D5C0004C71F8 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SampleViewController.m; sourceTree = "<group>"; };
 		2079DA6618EA4117004C71F8 /* HMRColorPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMRColorPalette.h; sourceTree = "<group>"; };
 		2079DA6718EA4117004C71F8 /* HMRColorPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMRColorPalette.m; sourceTree = "<group>"; };
+		2079DA6918EA53A2004C71F8 /* HMRSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMRSampleViewController.h; sourceTree = "<group>"; };
+		2079DA6A18EA53A2004C71F8 /* HMRSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMRSampleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,8 +193,8 @@
 				2079DA3F18E6BB59004C71F8 /* Main.storyboard */,
 				2079DA4218E6BB59004C71F8 /* HMRViewController.h */,
 				2079DA4318E6BB59004C71F8 /* HMRViewController.m */,
-				2079DA6318E6D5C0004C71F8 /* SampleViewController.h */,
-				2079DA6418E6D5C0004C71F8 /* SampleViewController.m */,
+				2079DA6918EA53A2004C71F8 /* HMRSampleViewController.h */,
+				2079DA6A18EA53A2004C71F8 /* HMRSampleViewController.m */,
 				2079DA6618EA4117004C71F8 /* HMRColorPalette.h */,
 				2079DA6718EA4117004C71F8 /* HMRColorPalette.m */,
 				2079DA4518E6BB59004C71F8 /* Images.xcassets */,
@@ -347,7 +347,7 @@
 			files = (
 				2079DA3E18E6BB59004C71F8 /* HMRAppDelegate.m in Sources */,
 				2079DA3A18E6BB59004C71F8 /* main.m in Sources */,
-				2079DA6518E6D5C0004C71F8 /* SampleViewController.m in Sources */,
+				2079DA6B18EA53A2004C71F8 /* HMRSampleViewController.m in Sources */,
 				2079DA4418E6BB59004C71F8 /* HMRViewController.m in Sources */,
 				2079DA6818EA4117004C71F8 /* HMRColorPalette.m in Sources */,
 			);

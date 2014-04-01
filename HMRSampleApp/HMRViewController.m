@@ -8,9 +8,10 @@
 
 #import "HMRViewController.h"
 #import "HMRScrollFeedView.h"
-#import "SampleViewController.h"
+#import "HMRSampleViewController.h"
 #import "HMRColorPalette.h"
 
+static const NSInteger MenuWidth = 80;
 static const NSInteger MenuHeight = 45;
 
 @interface HMRViewController ()
@@ -48,14 +49,14 @@ static const NSInteger MenuHeight = 45;
 }
 
 - (CGSize)sizeOfMenuView:(HMRScrollFeedView *)scrollFeedView {
-    return CGSizeMake(80, MenuHeight);
+    return CGSizeMake(MenuWidth, MenuHeight);
 }
 
 - (NSArray *)viewsForMenuView:(HMRScrollFeedView *)scrollFeedView {
     NSMutableArray *array = [NSMutableArray array];
     for (int i=0; i<9; i++) {
         // create view controller
-        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, MenuHeight)];
+        UIView *v = [[UIView alloc] initWithFrame:CGRectMake(0, 0, MenuWidth, MenuHeight)];
         v.backgroundColor = [HMRColorPalette colorWithIndex:i];
         [array addObject:v];
     }
@@ -68,7 +69,7 @@ static const NSInteger MenuHeight = 45;
     NSMutableArray *array = [NSMutableArray array];
     for (int i=0; i<9; i++) {
         // create rview controller
-        SampleViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SampleViewController"];
+        HMRSampleViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"SampleViewController"];
         [vc view];
         vc.titleLabel.text = [NSString stringWithFormat:@"%d", i];
         vc.view.backgroundColor = [HMRColorPalette colorWithIndex:i];
