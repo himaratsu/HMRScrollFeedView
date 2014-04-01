@@ -1,11 +1,3 @@
-//
-//  HMRViewController.m
-//  HMRSampleApp
-//
-//  Created by himara2 on 2014/03/29.
-//  Copyright (c) 2014年 himara2. All rights reserved.
-//
-
 #import "HMRViewController.h"
 #import "HMRScrollFeedView.h"
 #import "HMRSampleViewController.h"
@@ -21,15 +13,11 @@ static const NSInteger MenuHeight = 45;
 
 @end
 
+
 @implementation HMRViewController
 
 - (void)loadView {
     self.view = self.feedView;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
 }
 
 - (HMRScrollFeedView *)feedView {
@@ -62,7 +50,6 @@ static const NSInteger MenuHeight = 45;
     }
     
     return [array copy];
-
 }
 
 - (NSArray *)viewsForFeedView:(HMRScrollFeedView *)scrollFeedView {

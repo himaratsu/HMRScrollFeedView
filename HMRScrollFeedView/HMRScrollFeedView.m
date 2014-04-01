@@ -1,11 +1,3 @@
-//
-//  HMRScrollFeedView.m
-//  HMRScrollFeedView
-//
-//  Created by himara2 on 2014/03/29.
-//  Copyright (c) 2014年 himara2. All rights reserved.
-//
-
 #import "HMRScrollFeedView.h"
 
 @interface HMRScrollFeedView ()
@@ -25,10 +17,6 @@
 
 
 @implementation HMRScrollFeedView
-
-+ (NSString *)helloWorld {
-    return @"Hello!";
-}
 
 - (id)init
 {
@@ -81,6 +69,7 @@
 - (void)initialize
 {
     self.menuScrollView = [[UIScrollView alloc] init];
+    _menuScrollView.showsHorizontalScrollIndicator = NO;
     [self addSubview:_menuScrollView];
     
     self.pageViewController = [[UIPageViewController alloc]
@@ -140,11 +129,6 @@
     _menuScrollView.contentSize = CGSizeMake(_menuSize.width * index, _menuSize.height);
 }
 
-- (void)dealloc
-{
-    
-}
-
 - (UIPageViewControllerTransitionStyle)transitionStyle {
     return _pageViewController.transitionStyle;
 }
@@ -196,7 +180,8 @@
     return [_viewControllers indexOfObject:viewController];
 }
 
-#pragma mark - MenuScrollView
+
+#pragma mark - MenuScrollView Methods
 
 - (void)moveToPageIndexInMenuScrollViewWithIndex:(NSInteger)index {
     CGRect destFrame = CGRectMake(index * _menuSize.width + _menuSize.width/2 - 160,

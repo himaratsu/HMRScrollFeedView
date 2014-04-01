@@ -1,11 +1,3 @@
-//
-//  HMRColorPalette.m
-//  HMRScrollFeedView
-//
-//  Created by himara2 on 2014/04/01.
-//  Copyright (c) 2014年 himara2. All rights reserved.
-//
-
 #import "HMRColorPalette.h"
 
 @implementation HMRColorPalette
